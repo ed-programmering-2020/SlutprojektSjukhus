@@ -1,0 +1,14 @@
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\bin\Debug\Sjukhus.exe.config
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\bin\Debug\Sjukhus.exe
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\bin\Debug\Sjukhus.pdb
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.csprojAssemblyReference.cache
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.Boka.resources
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.Form1.resources
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.Patient.resources
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.Properties.Resources.resources
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.Admin.resources
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.csproj.GenerateResource.cache
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.csproj.CoreCompileInputs.cache
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.exe
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.pdb
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.VisaBokning.resources
