@@ -17,14 +17,14 @@ namespace Sjukhus
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBoka_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAvbryt_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

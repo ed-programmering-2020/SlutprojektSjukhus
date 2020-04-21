@@ -16,5 +16,10 @@ namespace Sjukhus
         {
             InitializeComponent();
         }
+
+        private void BokadeTider_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

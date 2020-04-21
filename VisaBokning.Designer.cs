@@ -138,6 +138,7 @@
             this.BokadeTider.Name = "BokadeTider";
             this.BokadeTider.Size = new System.Drawing.Size(260, 173);
             this.BokadeTider.TabIndex = 20;
+            this.BokadeTider.SelectedIndexChanged += new System.EventHandler(this.BokadeTider_SelectedIndexChanged);
             // 
             // VisaBokning
             // 

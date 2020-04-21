@@ -30,7 +30,7 @@
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSkickaAmbulans = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,14 +54,15 @@
             this.listBox2.Size = new System.Drawing.Size(225, 264);
             this.listBox2.TabIndex = 1;
             // 
-            // button1
+            // btnSkickaAmbulans
             // 
-            this.button1.Location = new System.Drawing.Point(36, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Skicka Ambulans";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSkickaAmbulans.Location = new System.Drawing.Point(36, 159);
+            this.btnSkickaAmbulans.Name = "btnSkickaAmbulans";
+            this.btnSkickaAmbulans.Size = new System.Drawing.Size(75, 35);
+            this.btnSkickaAmbulans.TabIndex = 2;
+            this.btnSkickaAmbulans.Text = "Skicka Ambulans";
+            this.btnSkickaAmbulans.UseVisualStyleBackColor = true;
+            this.btnSkickaAmbulans.Click += new System.EventHandler(this.btnSkickaAmbulans_Click);
             // 
             // label1
             // 
@@ -108,9 +109,9 @@
             this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(122, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 15);
+            this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Status..";
+            this.label4.Text = "Status: ...";
             // 
             // Admin
             // 
@@ -122,7 +123,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSkickaAmbulans);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Name = "Admin";
@@ -136,7 +137,7 @@
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSkickaAmbulans;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

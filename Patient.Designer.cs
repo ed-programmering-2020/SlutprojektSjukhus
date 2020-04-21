@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.btnVisaLäkartid = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxLäkarTid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBokaTid = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRingAmbulans = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -48,14 +48,14 @@
             this.btnVisaLäkartid.UseVisualStyleBackColor = true;
             this.btnVisaLäkartid.Click += new System.EventHandler(this.btnVisaLäkartid_Click);
             // 
-            // textBox1
+            // tbxLäkarTid
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(45, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ShortcutsEnabled = false;
-            this.textBox1.Size = new System.Drawing.Size(156, 22);
-            this.textBox1.TabIndex = 1;
+            this.tbxLäkarTid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxLäkarTid.Location = new System.Drawing.Point(45, 83);
+            this.tbxLäkarTid.Name = "tbxLäkarTid";
+            this.tbxLäkarTid.ShortcutsEnabled = false;
+            this.tbxLäkarTid.Size = new System.Drawing.Size(156, 22);
+            this.tbxLäkarTid.TabIndex = 1;
             // 
             // label1
             // 
@@ -97,14 +97,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Akut Ambulans";
             // 
-            // button1
+            // btnRingAmbulans
             // 
-            this.button1.Location = new System.Drawing.Point(239, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Ring Ambulans";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRingAmbulans.Location = new System.Drawing.Point(239, 165);
+            this.btnRingAmbulans.Name = "btnRingAmbulans";
+            this.btnRingAmbulans.Size = new System.Drawing.Size(86, 32);
+            this.btnRingAmbulans.TabIndex = 6;
+            this.btnRingAmbulans.Text = "Ring Ambulans";
+            this.btnRingAmbulans.UseVisualStyleBackColor = true;
+            this.btnRingAmbulans.Click += new System.EventHandler(this.btnRingAmbulans_Click);
             // 
             // label4
             // 
@@ -122,12 +123,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 321);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRingAmbulans);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBokaTid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxLäkarTid);
             this.Controls.Add(this.btnVisaLäkartid);
             this.Name = "Patient";
             this.Text = "Patient";
@@ -139,12 +140,12 @@
         #endregion
 
         private System.Windows.Forms.Button btnVisaLäkartid;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxLäkarTid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBokaTid;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRingAmbulans;
         private System.Windows.Forms.Label label4;
     }
 }
