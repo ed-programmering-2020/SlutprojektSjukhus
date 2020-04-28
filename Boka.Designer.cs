@@ -39,16 +39,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.cbHudsjukdom = new System.Windows.Forms.CheckBox();
+            this.cbLedvärk = new System.Windows.Forms.CheckBox();
+            this.cbRyggproblem = new System.Windows.Forms.CheckBox();
+            this.cbKolesterolproblem = new System.Windows.Forms.CheckBox();
+            this.cbAndningsproblem = new System.Windows.Forms.CheckBox();
+            this.cbDiabetes = new System.Windows.Forms.CheckBox();
+            this.cbHuvudvärkMigrän = new System.Windows.Forms.CheckBox();
+            this.cbHögtBlodtryck = new System.Windows.Forms.CheckBox();
+            this.cbNeurologiskaStörningar = new System.Windows.Forms.CheckBox();
+            this.cbÅngestDepression = new System.Windows.Forms.CheckBox();
             this.btnBoka = new System.Windows.Forms.Button();
             this.btnAvbryt = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -142,115 +142,115 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(285, 33);
+            this.label6.Location = new System.Drawing.Point(256, 33);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "Symptomer";
             // 
-            // checkBox1
+            // cbHudsjukdom
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(290, 70);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbHudsjukdom.AutoSize = true;
+            this.cbHudsjukdom.Location = new System.Drawing.Point(261, 70);
+            this.cbHudsjukdom.Name = "cbHudsjukdom";
+            this.cbHudsjukdom.Size = new System.Drawing.Size(85, 17);
+            this.cbHudsjukdom.TabIndex = 11;
+            this.cbHudsjukdom.Text = "Hudsjukdom";
+            this.cbHudsjukdom.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbLedvärk
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(290, 100);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbLedvärk.AutoSize = true;
+            this.cbLedvärk.Location = new System.Drawing.Point(261, 100);
+            this.cbLedvärk.Name = "cbLedvärk";
+            this.cbLedvärk.Size = new System.Drawing.Size(65, 17);
+            this.cbLedvärk.TabIndex = 12;
+            this.cbLedvärk.Text = "Ledvärk";
+            this.cbLedvärk.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cbRyggproblem
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(288, 130);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 13;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbRyggproblem.AutoSize = true;
+            this.cbRyggproblem.Location = new System.Drawing.Point(259, 130);
+            this.cbRyggproblem.Name = "cbRyggproblem";
+            this.cbRyggproblem.Size = new System.Drawing.Size(88, 17);
+            this.cbRyggproblem.TabIndex = 13;
+            this.cbRyggproblem.Text = "Ryggproblem";
+            this.cbRyggproblem.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // cbKolesterolproblem
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(288, 160);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
-            this.checkBox4.TabIndex = 14;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbKolesterolproblem.AutoSize = true;
+            this.cbKolesterolproblem.Location = new System.Drawing.Point(259, 160);
+            this.cbKolesterolproblem.Name = "cbKolesterolproblem";
+            this.cbKolesterolproblem.Size = new System.Drawing.Size(109, 17);
+            this.cbKolesterolproblem.TabIndex = 14;
+            this.cbKolesterolproblem.Text = "Kolesterolproblem";
+            this.cbKolesterolproblem.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // cbAndningsproblem
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(288, 190);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
-            this.checkBox5.TabIndex = 15;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cbAndningsproblem.AutoSize = true;
+            this.cbAndningsproblem.Location = new System.Drawing.Point(259, 190);
+            this.cbAndningsproblem.Name = "cbAndningsproblem";
+            this.cbAndningsproblem.Size = new System.Drawing.Size(107, 17);
+            this.cbAndningsproblem.TabIndex = 15;
+            this.cbAndningsproblem.Text = "Andningsproblem";
+            this.cbAndningsproblem.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // cbDiabetes
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(380, 190);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(80, 17);
-            this.checkBox6.TabIndex = 20;
-            this.checkBox6.Text = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.cbDiabetes.AutoSize = true;
+            this.cbDiabetes.Location = new System.Drawing.Point(370, 190);
+            this.cbDiabetes.Name = "cbDiabetes";
+            this.cbDiabetes.Size = new System.Drawing.Size(68, 17);
+            this.cbDiabetes.TabIndex = 20;
+            this.cbDiabetes.Text = "Diabetes";
+            this.cbDiabetes.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // cbHuvudvärkMigrän
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(380, 160);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(80, 17);
-            this.checkBox7.TabIndex = 19;
-            this.checkBox7.Text = "checkBox7";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.cbHuvudvärkMigrän.AutoSize = true;
+            this.cbHuvudvärkMigrän.Location = new System.Drawing.Point(370, 160);
+            this.cbHuvudvärkMigrän.Name = "cbHuvudvärkMigrän";
+            this.cbHuvudvärkMigrän.Size = new System.Drawing.Size(135, 17);
+            this.cbHuvudvärkMigrän.TabIndex = 19;
+            this.cbHuvudvärkMigrän.Text = "Huvudvärk eller migrän";
+            this.cbHuvudvärkMigrän.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // cbHögtBlodtryck
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(380, 130);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(80, 17);
-            this.checkBox8.TabIndex = 18;
-            this.checkBox8.Text = "checkBox8";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.cbHögtBlodtryck.AutoSize = true;
+            this.cbHögtBlodtryck.Location = new System.Drawing.Point(370, 130);
+            this.cbHögtBlodtryck.Name = "cbHögtBlodtryck";
+            this.cbHögtBlodtryck.Size = new System.Drawing.Size(95, 17);
+            this.cbHögtBlodtryck.TabIndex = 18;
+            this.cbHögtBlodtryck.Text = "Högt blodtryck";
+            this.cbHögtBlodtryck.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // cbNeurologiskaStörningar
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(380, 100);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(80, 17);
-            this.checkBox9.TabIndex = 17;
-            this.checkBox9.Text = "checkBox9";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.cbNeurologiskaStörningar.AutoSize = true;
+            this.cbNeurologiskaStörningar.Location = new System.Drawing.Point(370, 100);
+            this.cbNeurologiskaStörningar.Name = "cbNeurologiskaStörningar";
+            this.cbNeurologiskaStörningar.Size = new System.Drawing.Size(137, 17);
+            this.cbNeurologiskaStörningar.TabIndex = 17;
+            this.cbNeurologiskaStörningar.Text = "Neurologiska störningar";
+            this.cbNeurologiskaStörningar.UseVisualStyleBackColor = true;
             // 
-            // checkBox10
+            // cbÅngestDepression
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(380, 70);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(86, 17);
-            this.checkBox10.TabIndex = 16;
-            this.checkBox10.Text = "checkBox10";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.cbÅngestDepression.AutoSize = true;
+            this.cbÅngestDepression.Location = new System.Drawing.Point(370, 70);
+            this.cbÅngestDepression.Name = "cbÅngestDepression";
+            this.cbÅngestDepression.Size = new System.Drawing.Size(118, 17);
+            this.cbÅngestDepression.TabIndex = 16;
+            this.cbÅngestDepression.Text = "Ångest, Depression";
+            this.cbÅngestDepression.UseVisualStyleBackColor = true;
             // 
             // btnBoka
             // 
-            this.btnBoka.Location = new System.Drawing.Point(290, 220);
+            this.btnBoka.Location = new System.Drawing.Point(283, 220);
             this.btnBoka.Name = "btnBoka";
             this.btnBoka.Size = new System.Drawing.Size(75, 23);
             this.btnBoka.TabIndex = 21;
@@ -272,19 +272,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 261);
+            this.ClientSize = new System.Drawing.Size(509, 261);
             this.Controls.Add(this.btnAvbryt);
             this.Controls.Add(this.btnBoka);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox10);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cbDiabetes);
+            this.Controls.Add(this.cbHuvudvärkMigrän);
+            this.Controls.Add(this.cbHögtBlodtryck);
+            this.Controls.Add(this.cbNeurologiskaStörningar);
+            this.Controls.Add(this.cbÅngestDepression);
+            this.Controls.Add(this.cbAndningsproblem);
+            this.Controls.Add(this.cbKolesterolproblem);
+            this.Controls.Add(this.cbRyggproblem);
+            this.Controls.Add(this.cbLedvärk);
+            this.Controls.Add(this.cbHudsjukdom);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -316,16 +316,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox cbHudsjukdom;
+        private System.Windows.Forms.CheckBox cbLedvärk;
+        private System.Windows.Forms.CheckBox cbRyggproblem;
+        private System.Windows.Forms.CheckBox cbKolesterolproblem;
+        private System.Windows.Forms.CheckBox cbAndningsproblem;
+        private System.Windows.Forms.CheckBox cbDiabetes;
+        private System.Windows.Forms.CheckBox cbHuvudvärkMigrän;
+        private System.Windows.Forms.CheckBox cbHögtBlodtryck;
+        private System.Windows.Forms.CheckBox cbNeurologiskaStörningar;
+        private System.Windows.Forms.CheckBox cbÅngestDepression;
         private System.Windows.Forms.Button btnBoka;
         private System.Windows.Forms.Button btnAvbryt;
     }
