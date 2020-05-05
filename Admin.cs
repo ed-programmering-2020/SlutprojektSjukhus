@@ -25,7 +25,7 @@ namespace Sjukhus
             InitializeComponent();
             connection = new MySqlConnection(connectionString);
             StartaServer();
-            HämtaLäkare();
+            //HämtaLäkare();
             HämtaPatienter();
         }
 

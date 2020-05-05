@@ -213,9 +213,9 @@
             this.cbHuvudvärkMigrän.AutoSize = true;
             this.cbHuvudvärkMigrän.Location = new System.Drawing.Point(370, 160);
             this.cbHuvudvärkMigrän.Name = "cbHuvudvärkMigrän";
-            this.cbHuvudvärkMigrän.Size = new System.Drawing.Size(135, 17);
+            this.cbHuvudvärkMigrän.Size = new System.Drawing.Size(115, 17);
             this.cbHuvudvärkMigrän.TabIndex = 19;
-            this.cbHuvudvärkMigrän.Text = "Huvudvärk eller migrän";
+            this.cbHuvudvärkMigrän.Text = "Huvudvärk/migrän";
             this.cbHuvudvärkMigrän.UseVisualStyleBackColor = true;
             // 
             // cbHögtBlodtryck
