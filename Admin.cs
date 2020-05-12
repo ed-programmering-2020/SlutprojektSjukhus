@@ -14,7 +14,7 @@ namespace Sjukhus
         List<string> patienter = new List<string>();
 
         MySqlConnection connection;
-        string connectionString = "SERVER=localhost;DATABASE=sjukhus;" + "UID=user_sjukhus;PASSWORD=password;";
+        string connectionString = "SERVER=5.178.75.122;DATABASE=sjukhusdb;UID=linus;PASSWORD=LinusT;";
 
 
         TcpListener lyssnare;
@@ -25,8 +25,8 @@ namespace Sjukhus
             InitializeComponent();
             connection = new MySqlConnection(connectionString);
             StartaServer();
-            //HämtaLäkare();
             HämtaPatienter();
+            HämtaLäkare();
         }
 
         private void StartaServer()
@@ -73,16 +73,6 @@ namespace Sjukhus
         {
 
         }
-
-        private void HämtaLäkare()
-        {
-            HämtaTabell("läkare", läkare);
-            for(int i = 0; i < läkare.Count; i++)
-            {
-                listBox1.Items.Add(läkare[i]);
-            }
-        }
-
         private void HämtaPatienter()
         {
             HämtaTabell("patienter", patienter);
@@ -92,12 +82,26 @@ namespace Sjukhus
             }
         }
 
+        private void HämtaLäkare()
+        {
+            HämtaTabell("läkare", läkare);
+            for(int i = 0; i < läkare.Count; i++)
+            {
+                listBox2.Items.Add(läkare[i]);
+            }
+        }
+
         private void HämtaTabell(string t, List<string> l)
         {
             connection.Open();
 
             MySqlDataReader dataReader;
-            string sqlsats = "SELECT ID FROM " + t;
+            string sqlsats = "";
+
+            if (t == "patienter")
+                sqlsats = "SELECT ID, Namn, Efternamn, Symptomer FROM " + t;
+            else
+                sqlsats = "SELECT ID, Namn, Efternamn, Specialisering FROM " + t;
 
             MySqlCommand cmd = new MySqlCommand(sqlsats, connection);
             dataReader = cmd.ExecuteReader();
@@ -105,10 +109,21 @@ namespace Sjukhus
             l.Clear();
             while (dataReader.Read())
             {
-                l.Add(dataReader.GetString("ID"));
+                if (t == "patienter")
+                    l.Add(dataReader.GetString("Namn") + " " + dataReader.GetString("Efternamn") + " - Symptom: " + dataReader.GetString("Symptomer"));
+                else
+                    l.Add(dataReader.GetString("Namn") + " " + dataReader.GetString("Efternamn") + " - Specialisering: " + dataReader.GetString("Specialisering"));
             }
 
             connection.Close();
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != null)
+            {
+                
+            }
         }
     }
 }

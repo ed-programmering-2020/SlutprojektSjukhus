@@ -81,6 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminTilldelaPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTilldelaPatient.Designer.cs">
+      <DependentUpon>AdminTilldelaPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Boka.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,12 +113,16 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tabeller.cs" />
     <Compile Include="VisaBokning.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VisaBokning.Designer.cs">
       <DependentUpon>VisaBokning.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminTilldelaPatient.resx">
+      <DependentUpon>AdminTilldelaPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Boka.resx">
       <DependentUpon>Boka.cs</DependentUpon>
     </EmbeddedResource>

@@ -14,7 +14,7 @@ namespace Sjukhus
     public partial class Boka : Form
     {
         MySqlConnection connection;
-        string connectionString = "SERVER=localhost;DATABASE=sjukhus;" + "UID=user_sjukhus;PASSWORD=password;";
+        string connectionString = "SERVER=5.178.75.122;DATABASE=sjukhusdb;UID=linus;PASSWORD=LinusT;";
 
         public Boka()
         {
@@ -155,7 +155,6 @@ namespace Sjukhus
                 connection.Open();
 
                 string sqlsats = string.Format("INSERT INTO patienter (Namn, Efternamn, Personnummer, Adress, Telefonnummer, Symptomer, RegistreringsTid) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", tbxNamn.Text, tbxEfternamn.Text, tbxPersonnummer.Text, tbxAdress.Text, tbxTelefon.Text, symptomer, DateTime.Now.ToString() );
-                //string sqlsats = string.Format("INSERT INTO pasienter (NameV VALUES ('{0}''", tbxNamn.Text, tbxEfternamn.Text, tbxPersonnummer.Text, tbxAdress.Text, tbxTelefon.Text, symptomer, DateTime.Now.ToString());
                 MySqlCommand cmd = new MySqlCommand(sqlsats, connection);
                 try
                 {
