@@ -1,7 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Net;
 using System.Net.Sockets;
 using System.Windows.Forms;
@@ -11,7 +13,7 @@ namespace Sjukhus
     public partial class Admin : Form
     {
         List<string> läkare = new List<string>();
-        List<string> patienter = new List<string>();
+        List<patienter> AllaPatienter = new List<patienter>();
 
         MySqlConnection connection;
         string connectionString = "SERVER=5.178.75.122;DATABASE=sjukhusdb;UID=linus;PASSWORD=LinusT;";
@@ -26,7 +28,7 @@ namespace Sjukhus
             connection = new MySqlConnection(connectionString);
             StartaServer();
             HämtaPatienter();
-            HämtaLäkare();
+           // HämtaLäkare();
         }
 
         private void StartaServer()
@@ -66,53 +68,53 @@ namespace Sjukhus
         private void AmbulansInväntan(TcpClient k)
         {
             Debug.WriteLine(k.ToString());
+            label4.Text = "Inväntande...";
+            label4.ForeColor = Color.FromArgb(0, 255, 255);
             btnSkickaAmbulans.Enabled = true;
         }
 
         private void btnSkickaAmbulans_Click(object sender, EventArgs e)
         {
-
+            label4.Text = "Skickad!";
+            label4.ForeColor = Color.FromArgb(0, 255, 0);
         }
         private void HämtaPatienter()
         {
-            HämtaTabell("patienter", patienter);
-            for (int i = 0; i < patienter.Count; i++)
-            {
-                listBox1.Items.Add(patienter[i]);
-            }
+             HämtaTabell();
+             for (int i = 0; i < AllaPatienter.Count; i++)
+            /* {
+                 listBox1.Items.Add(AllaPatienter[i]);
+             }*/
+
+            listBox1.DataSource = AllaPatienter; 
         }
 
         private void HämtaLäkare()
         {
-            HämtaTabell("läkare", läkare);
+           /* HämtaTabell("läkare", läkare);
             for(int i = 0; i < läkare.Count; i++)
             {
                 listBox2.Items.Add(läkare[i]);
-            }
+            }*/
         }
 
-        private void HämtaTabell(string t, List<string> l)
+        private void HämtaTabell()
         {
+           
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            MySqlDataReader dataReader;
-            string sqlsats = "";
+            MySqlCommand cmd = patienter.getAll();  //statisk metod
+            MySqlDataAdapter datAdapt = new MySqlDataAdapter();
+            datAdapt.SelectCommand = cmd;
+            cmd.Connection = connection;
+            DataTable dt = new DataTable();
+            datAdapt.Fill(dt);
 
-            if (t == "patienter")
-                sqlsats = "SELECT ID, Namn, Efternamn, Symptomer FROM " + t;
-            else
-                sqlsats = "SELECT ID, Namn, Efternamn, Specialisering FROM " + t;
-
-            MySqlCommand cmd = new MySqlCommand(sqlsats, connection);
-            dataReader = cmd.ExecuteReader();
-
-            l.Clear();
-            while (dataReader.Read())
+            foreach (DataRow row in dt.Rows)
             {
-                if (t == "patienter")
-                    l.Add(dataReader.GetString("Namn") + " " + dataReader.GetString("Efternamn") + " - Symptom: " + dataReader.GetString("Symptomer"));
-                else
-                    l.Add(dataReader.GetString("Namn") + " " + dataReader.GetString("Efternamn") + " - Specialisering: " + dataReader.GetString("Specialisering"));
+                AllaPatienter.Add(new patienter(row));
             }
 
             connection.Close();
@@ -122,7 +124,15 @@ namespace Sjukhus
         {
             if (listBox1.SelectedIndex != null)
             {
-                
+                MessageBox.Show(listBox1.SelectedItem.ToString());
+            }
+        }
+
+        private void listBox2_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox2.SelectedIndex != null)
+            {
+                MessageBox.Show(listBox1.SelectedItem.ToString());
             }
         }
     }

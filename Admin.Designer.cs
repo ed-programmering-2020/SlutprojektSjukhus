@@ -54,6 +54,7 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(225, 264);
             this.listBox2.TabIndex = 1;
+            this.listBox2.DoubleClick += new System.EventHandler(this.listBox2_DoubleClick);
             // 
             // btnSkickaAmbulans
             // 

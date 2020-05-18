@@ -30,3 +30,4 @@ C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\bin\Debug\System.Memory.xml
 C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.csproj.CopyComplete
+C:\Users\0102thli\source\repos\Sjukhus\Sjukhus\obj\Debug\Sjukhus.AdminTilldelaPatient.resources

@@ -105,6 +105,7 @@
     <Compile Include="Patient.Designer.cs">
       <DependentUpon>Patient.cs</DependentUpon>
     </Compile>
+    <Compile Include="patienter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Admin.cs">
