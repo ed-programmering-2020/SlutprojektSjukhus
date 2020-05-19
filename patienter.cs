@@ -33,8 +33,7 @@ namespace Sjukhus
         // Datarad till objekt via Konstruktör 
         public patienter(DataRow dr)
         {
-            //ID = dr["ID"] == DBNull.Value ? ID = 0 : (int)dr["ID"];
-            ID = 1;
+            ID = dr["ID"] == DBNull.Value ? ID = 0 : (int)dr["ID"];
             Namn = dr["Namn"] == DBNull.Value ? Namn = "" : (string)dr["Namn"];
             Efternamn = dr["Efternamn"] == DBNull.Value ? Efternamn = "" : (string)dr["Efternamn"];
             Personnummer = dr["Personnummer"] == DBNull.Value ? Personnummer = 0 : (int)dr["Personnummer"];
@@ -45,7 +44,10 @@ namespace Sjukhus
         }
 
         // todo: rätt ToString för att fylla listboxar mm)
-        public override string ToString() { return "Not implemented yet"; }
+        public override string ToString() 
+        { 
+            return Namn + " " + Efternamn + " : " + Symptomer;
+        }
 
         // metod för radera detta objekt
         public MySqlCommand GetDeleteCommand()

@@ -99,6 +99,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="läkare.cs" />
     <Compile Include="Patient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,7 +115,6 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tabeller.cs" />
     <Compile Include="VisaBokning.cs">
       <SubType>Form</SubType>
     </Compile>

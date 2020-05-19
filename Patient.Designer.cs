@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnRingAmbulans = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.tbxIPAdress = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnVisaLäkartid
@@ -117,11 +118,19 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Status...";
             // 
+            // tbxIPAdress
+            // 
+            this.tbxIPAdress.Location = new System.Drawing.Point(239, 212);
+            this.tbxIPAdress.Name = "tbxIPAdress";
+            this.tbxIPAdress.Size = new System.Drawing.Size(100, 20);
+            this.tbxIPAdress.TabIndex = 8;
+            // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 321);
+            this.Controls.Add(this.tbxIPAdress);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRingAmbulans);
             this.Controls.Add(this.label3);
@@ -147,5 +156,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRingAmbulans;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbxIPAdress;
     }
 }

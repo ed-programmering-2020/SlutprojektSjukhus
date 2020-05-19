@@ -41,6 +41,9 @@
             this.tbxTelefonnummer = new System.Windows.Forms.TextBox();
             this.tbxSymptom = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnRegistrera = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -159,11 +162,42 @@
             this.listBox1.Size = new System.Drawing.Size(183, 199);
             this.listBox1.TabIndex = 12;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(151, 242);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(165, 20);
+            this.dateTimePicker1.TabIndex = 13;
+            this.dateTimePicker1.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(21, 242);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 16);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Datum";
+            // 
+            // btnRegistrera
+            // 
+            this.btnRegistrera.Location = new System.Drawing.Point(354, 239);
+            this.btnRegistrera.Name = "btnRegistrera";
+            this.btnRegistrera.Size = new System.Drawing.Size(104, 23);
+            this.btnRegistrera.TabIndex = 15;
+            this.btnRegistrera.Text = "Registrera";
+            this.btnRegistrera.UseVisualStyleBackColor = true;
+            this.btnRegistrera.Click += new System.EventHandler(this.btnRegistrera_Click);
+            // 
             // AdminTilldelaPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 286);
+            this.Controls.Add(this.btnRegistrera);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.tbxSymptom);
             this.Controls.Add(this.tbxTelefonnummer);
@@ -199,5 +233,8 @@
         private System.Windows.Forms.TextBox tbxTelefonnummer;
         private System.Windows.Forms.TextBox tbxSymptom;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnRegistrera;
     }
 }

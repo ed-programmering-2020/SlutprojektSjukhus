@@ -12,10 +12,9 @@ namespace Sjukhus
 {
     public partial class Admin : Form
     {
-        List<string> läkare = new List<string>();
+        List<läkare> AllaLäkare = new List<läkare>();
         List<patienter> AllaPatienter = new List<patienter>();
 
-        MySqlConnection connection;
         string connectionString = "SERVER=5.178.75.122;DATABASE=sjukhusdb;UID=linus;PASSWORD=LinusT;";
 
 
@@ -25,10 +24,9 @@ namespace Sjukhus
         public Admin()
         {
             InitializeComponent();
-            connection = new MySqlConnection(connectionString);
             StartaServer();
             HämtaPatienter();
-           // HämtaLäkare();
+            HämtaLäkare();
         }
 
         private void StartaServer()
@@ -80,22 +78,46 @@ namespace Sjukhus
         }
         private void HämtaPatienter()
         {
-             HämtaTabell();
-             for (int i = 0; i < AllaPatienter.Count; i++)
-            /* {
-                 listBox1.Items.Add(AllaPatienter[i]);
-             }*/
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand cmd = patienter.getAll();  //statisk metod
+            MySqlDataAdapter datAdapt = new MySqlDataAdapter();
+            datAdapt.SelectCommand = cmd;
+            cmd.Connection = connection;
+            DataTable dt = new DataTable();
+            datAdapt.Fill(dt);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                AllaPatienter.Add(new patienter(row));
+            }
+
+            connection.Close();
 
             listBox1.DataSource = AllaPatienter; 
         }
 
         private void HämtaLäkare()
         {
-           /* HämtaTabell("läkare", läkare);
-            for(int i = 0; i < läkare.Count; i++)
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlCommand cmd = läkare.getAll();  //statisk metod
+            MySqlDataAdapter datAdapt = new MySqlDataAdapter();
+            datAdapt.SelectCommand = cmd;
+            cmd.Connection = connection;
+            DataTable dt = new DataTable();
+            datAdapt.Fill(dt);
+
+            foreach (DataRow row in dt.Rows)
             {
-                listBox2.Items.Add(läkare[i]);
-            }*/
+                AllaLäkare.Add(new läkare(row));
+            }
+
+            connection.Close();
+
+            listBox2.DataSource = AllaLäkare;
         }
 
         private void HämtaTabell()
@@ -122,18 +144,10 @@ namespace Sjukhus
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != null)
-            {
                 MessageBox.Show(listBox1.SelectedItem.ToString());
-            }
-        }
 
-        private void listBox2_DoubleClick(object sender, EventArgs e)
-        {
-            if (listBox2.SelectedIndex != null)
-            {
-                MessageBox.Show(listBox1.SelectedItem.ToString());
-            }
+                AdminTilldelaPatient adminTilldelaPatient = new AdminTilldelaPatient(AllaPatienter[listBox1.SelectedIndex]);
+                adminTilldelaPatient.Show();
         }
     }
 }

@@ -52,9 +52,9 @@
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(541, 70);
             this.listBox2.Name = "listBox2";
+            this.listBox2.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox2.Size = new System.Drawing.Size(225, 264);
             this.listBox2.TabIndex = 1;
-            this.listBox2.DoubleClick += new System.EventHandler(this.listBox2_DoubleClick);
             // 
             // btnSkickaAmbulans
             // 
