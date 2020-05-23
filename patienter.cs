@@ -49,6 +49,28 @@ namespace Sjukhus
             return Namn + " " + Efternamn + " : " + Symptomer;
         }
 
+        public static string GetNameLastname(int ID)
+        {
+            string connectionString = "SERVER=5.178.75.122;DATABASE=sjukhusdb;UID=linus;PASSWORD=LinusT;";
+            string returnValue = "";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+
+            MySqlDataReader dataReader = null;
+            string sqlsats = "Select Namn, Efternamn from patienter where ID =" + ID;
+            MySqlCommand cmd = new MySqlCommand(sqlsats, connection);
+
+            dataReader = cmd.ExecuteReader();
+            while (dataReader.Read())
+            {
+                returnValue = dataReader.GetValue(0).ToString() + " " + dataReader.GetValue(1).ToString();
+            }
+
+            return returnValue;
+        }
+
+
         // metod för radera detta objekt
         public MySqlCommand GetDeleteCommand()
         {

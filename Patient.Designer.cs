@@ -37,6 +37,7 @@
             this.btnRingAmbulans = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxIPAdress = new System.Windows.Forms.TextBox();
+            this.btnAnslut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnVisaLäkartid
@@ -120,16 +121,28 @@
             // 
             // tbxIPAdress
             // 
-            this.tbxIPAdress.Location = new System.Drawing.Point(239, 212);
+            this.tbxIPAdress.Location = new System.Drawing.Point(218, 214);
             this.tbxIPAdress.Name = "tbxIPAdress";
             this.tbxIPAdress.Size = new System.Drawing.Size(100, 20);
             this.tbxIPAdress.TabIndex = 8;
+            this.tbxIPAdress.Text = "192.168.1.";
+            // 
+            // btnAnslut
+            // 
+            this.btnAnslut.Location = new System.Drawing.Point(324, 214);
+            this.btnAnslut.Name = "btnAnslut";
+            this.btnAnslut.Size = new System.Drawing.Size(75, 23);
+            this.btnAnslut.TabIndex = 9;
+            this.btnAnslut.Text = "Anslut";
+            this.btnAnslut.UseVisualStyleBackColor = true;
+            this.btnAnslut.Click += new System.EventHandler(this.btnAnslut_Click);
             // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 321);
+            this.Controls.Add(this.btnAnslut);
             this.Controls.Add(this.tbxIPAdress);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRingAmbulans);
@@ -157,5 +170,6 @@
         private System.Windows.Forms.Button btnRingAmbulans;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxIPAdress;
+        private System.Windows.Forms.Button btnAnslut;
     }
 }

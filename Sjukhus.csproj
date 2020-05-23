@@ -93,6 +93,7 @@
     <Compile Include="Boka.Designer.cs">
       <DependentUpon>Boka.cs</DependentUpon>
     </Compile>
+    <Compile Include="bokningar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

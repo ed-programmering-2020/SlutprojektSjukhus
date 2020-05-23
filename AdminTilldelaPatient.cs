@@ -30,6 +30,8 @@ namespace Sjukhus
             tbxTelefonnummer.Text = patient.Telefonnummer.ToString();
             tbxSymptom.Text = patient.Symptomer;
 
+            dateTimePicker1.Value = DateTime.Now;
+
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
@@ -51,8 +53,13 @@ namespace Sjukhus
 
         private void btnRegistrera_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Är du säker på att du vill registrera detta?", "Utföra?", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if(MessageBox.Show("Är du säker på att du vill registrera detta?", "Utföra?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
+                if(dateTimePicker1.Value.Date <= DateTime.Now.Date)
+                {
+                    MessageBox.Show("Ändra på datumet!", "Varning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 läkare = AllaLäkare[listBox1.SelectedIndex];
 
                 MySqlConnection connection = new MySqlConnection(connectionString);
@@ -73,7 +80,7 @@ namespace Sjukhus
                 }
 
                 connection.Close();
-                MessageBox.Show("Registrering klar!", "Klar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
     }

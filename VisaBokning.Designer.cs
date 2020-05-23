@@ -39,6 +39,10 @@
             this.tbxNamn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BokadeTider = new System.Windows.Forms.ListBox();
+            this.btnSpara = new System.Windows.Forms.Button();
+            this.btnRadera = new System.Windows.Forms.Button();
+            this.btnAvbryt = new System.Windows.Forms.Button();
+            this.btnRaderaTid = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -65,7 +69,6 @@
             // 
             this.tbxTelefon.Location = new System.Drawing.Point(150, 190);
             this.tbxTelefon.Name = "tbxTelefon";
-            this.tbxTelefon.ReadOnly = true;
             this.tbxTelefon.Size = new System.Drawing.Size(100, 20);
             this.tbxTelefon.TabIndex = 17;
             // 
@@ -73,7 +76,6 @@
             // 
             this.tbxAdress.Location = new System.Drawing.Point(150, 150);
             this.tbxAdress.Name = "tbxAdress";
-            this.tbxAdress.ReadOnly = true;
             this.tbxAdress.Size = new System.Drawing.Size(100, 20);
             this.tbxAdress.TabIndex = 16;
             // 
@@ -99,7 +101,6 @@
             // 
             this.tbxEfternamn.Location = new System.Drawing.Point(150, 70);
             this.tbxEfternamn.Name = "tbxEfternamn";
-            this.tbxEfternamn.ReadOnly = true;
             this.tbxEfternamn.Size = new System.Drawing.Size(100, 20);
             this.tbxEfternamn.TabIndex = 13;
             // 
@@ -117,7 +118,6 @@
             // 
             this.tbxNamn.Location = new System.Drawing.Point(150, 30);
             this.tbxNamn.Name = "tbxNamn";
-            this.tbxNamn.ReadOnly = true;
             this.tbxNamn.Size = new System.Drawing.Size(100, 20);
             this.tbxNamn.TabIndex = 11;
             // 
@@ -138,13 +138,56 @@
             this.BokadeTider.Name = "BokadeTider";
             this.BokadeTider.Size = new System.Drawing.Size(260, 173);
             this.BokadeTider.TabIndex = 20;
-            this.BokadeTider.SelectedIndexChanged += new System.EventHandler(this.BokadeTider_SelectedIndexChanged);
+            // 
+            // btnSpara
+            // 
+            this.btnSpara.Location = new System.Drawing.Point(485, 225);
+            this.btnSpara.Name = "btnSpara";
+            this.btnSpara.Size = new System.Drawing.Size(75, 37);
+            this.btnSpara.TabIndex = 21;
+            this.btnSpara.Text = "Spara ändringar";
+            this.btnSpara.UseVisualStyleBackColor = true;
+            this.btnSpara.Click += new System.EventHandler(this.btnSpara_Click);
+            // 
+            // btnRadera
+            // 
+            this.btnRadera.Location = new System.Drawing.Point(175, 225);
+            this.btnRadera.Name = "btnRadera";
+            this.btnRadera.Size = new System.Drawing.Size(75, 37);
+            this.btnRadera.TabIndex = 22;
+            this.btnRadera.Text = "Radera Registrering";
+            this.btnRadera.UseVisualStyleBackColor = true;
+            this.btnRadera.Click += new System.EventHandler(this.btnRadera_Click);
+            // 
+            // btnAvbryt
+            // 
+            this.btnAvbryt.Location = new System.Drawing.Point(300, 225);
+            this.btnAvbryt.Name = "btnAvbryt";
+            this.btnAvbryt.Size = new System.Drawing.Size(75, 37);
+            this.btnAvbryt.TabIndex = 23;
+            this.btnAvbryt.Text = "Avbryt";
+            this.btnAvbryt.UseVisualStyleBackColor = true;
+            this.btnAvbryt.Click += new System.EventHandler(this.btnAvbryt_Click);
+            // 
+            // btnRaderaTid
+            // 
+            this.btnRaderaTid.Location = new System.Drawing.Point(392, 225);
+            this.btnRaderaTid.Name = "btnRaderaTid";
+            this.btnRaderaTid.Size = new System.Drawing.Size(75, 37);
+            this.btnRaderaTid.TabIndex = 24;
+            this.btnRaderaTid.Text = "Radera läkartid";
+            this.btnRaderaTid.UseVisualStyleBackColor = true;
+            this.btnRaderaTid.Click += new System.EventHandler(this.btnRaderaTid_Click);
             // 
             // VisaBokning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 264);
+            this.ClientSize = new System.Drawing.Size(600, 283);
+            this.Controls.Add(this.btnRaderaTid);
+            this.Controls.Add(this.btnAvbryt);
+            this.Controls.Add(this.btnRadera);
+            this.Controls.Add(this.btnSpara);
             this.Controls.Add(this.BokadeTider);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -176,5 +219,9 @@
         private System.Windows.Forms.TextBox tbxNamn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox BokadeTider;
+        private System.Windows.Forms.Button btnSpara;
+        private System.Windows.Forms.Button btnRadera;
+        private System.Windows.Forms.Button btnAvbryt;
+        private System.Windows.Forms.Button btnRaderaTid;
     }
 }
