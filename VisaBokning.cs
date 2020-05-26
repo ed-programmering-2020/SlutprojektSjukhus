@@ -67,7 +67,12 @@ namespace Sjukhus
 
             connection.Close();
 
-            BokadeTider.DataSource = AllaBokningar;
+            BokadeTider.Items.Clear();
+            for (int i = 0; i < AllaBokningar.Count; i++)
+            {
+                BokadeTider.Items.Add(AllaBokningar[i]);
+            }
+            // BokadeTider.DataSource = AllaBokningar;
         }
 
         private void btnSpara_Click(object sender, EventArgs e)
@@ -113,6 +118,8 @@ namespace Sjukhus
                 cmd.ExecuteNonQuery();
 
                 connection.Close();
+
+                HämtaBokningar();
             }
         }
 

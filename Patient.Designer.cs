@@ -101,6 +101,7 @@
             // 
             // btnRingAmbulans
             // 
+            this.btnRingAmbulans.Enabled = false;
             this.btnRingAmbulans.Location = new System.Drawing.Point(239, 165);
             this.btnRingAmbulans.Name = "btnRingAmbulans";
             this.btnRingAmbulans.Size = new System.Drawing.Size(86, 32);
@@ -112,8 +113,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(331, 175);
+            this.label4.Location = new System.Drawing.Point(236, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 7;
@@ -121,7 +123,7 @@
             // 
             // tbxIPAdress
             // 
-            this.tbxIPAdress.Location = new System.Drawing.Point(218, 214);
+            this.tbxIPAdress.Location = new System.Drawing.Point(225, 236);
             this.tbxIPAdress.Name = "tbxIPAdress";
             this.tbxIPAdress.Size = new System.Drawing.Size(100, 20);
             this.tbxIPAdress.TabIndex = 8;
@@ -129,7 +131,7 @@
             // 
             // btnAnslut
             // 
-            this.btnAnslut.Location = new System.Drawing.Point(324, 214);
+            this.btnAnslut.Location = new System.Drawing.Point(331, 236);
             this.btnAnslut.Name = "btnAnslut";
             this.btnAnslut.Size = new System.Drawing.Size(75, 23);
             this.btnAnslut.TabIndex = 9;

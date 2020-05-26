@@ -18,7 +18,10 @@ namespace Sjukhus
         List<patienter> AllaPatienter = new List<patienter>();
 
         string connectionString = "SERVER=5.178.75.122;DATABASE=sjukhusdb;UID=linus;PASSWORD=LinusT;";
-        TcpClient client = new TcpClient();
+        // TcpClient client = new TcpClient();
+
+        TcpClient klient;
+        // string IPAdress;
 
         TcpListener lyssnare;
         int port = 12345;
@@ -48,8 +51,6 @@ namespace Sjukhus
 
         public async void StartaMottagning()
         {
-            TcpClient klient;
-
             try
             {
                 klient = await lyssnare.AcceptTcpClientAsync();
@@ -60,8 +61,11 @@ namespace Sjukhus
                 return;
             }
 
+            label4.Text = "Ansluten till patient!";
+            label4.ForeColor = Color.FromArgb(0, 255, 255);
+            // IPAdress = klient.Client.RemoteEndPoint.ToString().Split(':')[0];
             AmbulansInväntan(klient);
-            StartaMottagning();
+            // StartaMottagning();
         }
 
         private async void AmbulansInväntan(TcpClient k)
@@ -84,9 +88,8 @@ namespace Sjukhus
 
                 Debug.WriteLine(k.ToString());
                 label4.Text = "Inväntande...";
-                label4.ForeColor = Color.FromArgb(0, 255, 255);
+                label4.ForeColor = Color.FromArgb(255, 255, 0);
                 btnSkickaAmbulans.Enabled = true;
-                k.Close();
             }
             else
             {
@@ -106,12 +109,12 @@ namespace Sjukhus
 
             try
             {
-                await client.GetStream().WriteAsync(utData, 0, utData.Length);
+                await klient.GetStream().WriteAsync(utData, 0, utData.Length);
             }
             catch (Exception error)
             {
                 MessageBox.Show(error.Message, Text);
-                client.Close();
+                klient.Close();
                 return;
             }
         }
@@ -120,9 +123,10 @@ namespace Sjukhus
         {
             StartaSändning();
 
-            label4.Text = "Skickad!";
+            label4.Text = "Skickat " + comboBox1.Text + "!";
             label4.ForeColor = Color.FromArgb(0, 255, 0);
-            StartaMottagning();
+            klient.Close();
+            // StartaMottagning();
         }
         private void HämtaPatienter()
         {

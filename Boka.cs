@@ -154,7 +154,7 @@ namespace Sjukhus
                 connection = new MySqlConnection(connectionString);
                 connection.Open();
 
-                string sqlsats = string.Format("INSERT INTO patienter (Namn, Efternamn, Personnummer, Adress, Telefonnummer, Symptomer, RegistreringsTid) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", tbxNamn.Text, tbxEfternamn.Text, tbxPersonnummer.Text, tbxAdress.Text, tbxTelefon.Text, symptomer, DateTime.Now.ToString() );
+                string sqlsats = string.Format("INSERT INTO patienter (Namn, Efternamn, Personnummer, Adress, Telefonnummer, Symptomer, RegistreringsTid) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", tbxNamn.Text, tbxEfternamn.Text, Int32.Parse(tbxPersonnummer.Text), tbxAdress.Text, Int32.Parse(tbxTelefon.Text), symptomer, DateTime.Now.ToString());
                 MySqlCommand cmd = new MySqlCommand(sqlsats, connection);
                 try
                 {
@@ -163,7 +163,7 @@ namespace Sjukhus
                 catch (Exception error)
                 {
                     Console.WriteLine(error);
-                    MessageBox.Show("Du måste fylla i alla rutor för att registrera dig", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Du måste fylla i alla rutor för att registrera dig! (" + error + ")", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     connection.Close();
                     return;
                 }

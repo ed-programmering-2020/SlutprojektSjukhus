@@ -55,7 +55,9 @@ namespace Sjukhus
                 MessageBox.Show(error.Message, Text);
                 return;
             }
-            btnAnslut.Enabled = false;
+            label4.Text = "Ansluten till sjukhuset!";
+            label4.ForeColor = Color.FromArgb(0, 255, 255);
+            btnRingAmbulans.Enabled = true;
         }
 
         public async void StartaSändning(string input)
@@ -71,14 +73,17 @@ namespace Sjukhus
                 MessageBox.Show(error.Message, Text);
                 return;
             }
-            AnslutServer(klient);
+            // klient.Close();
+            label4.Text = "Ambulans föfrågan har skickats!";
+            label4.ForeColor = Color.FromArgb(255, 255, 0);
+            StartaServer(klient);
         }
-        private void AnslutServer(TcpClient k)
-        {
 
+        private void StartaServer(TcpClient k)
+        {
             try
             {
-                lyssnare = new TcpListener(IPAddress.Parse(tbxIPAdress.Text), port);
+                lyssnare = new TcpListener(IPAddress.Any, port);
                 lyssnare.Start();
             }
             catch (Exception error)
@@ -89,6 +94,7 @@ namespace Sjukhus
 
             StartaMottagning(k);
         }
+        
         private async void StartaMottagning(TcpClient k)
         {
             byte[] buffert = new byte[1024];
@@ -103,7 +109,7 @@ namespace Sjukhus
                 MessageBox.Show(error.Message, Text);
                 return;
             }
-            label4.Text = Encoding.Unicode.GetString(buffert, 0, n);
+            label4.Text = Encoding.Unicode.GetString(buffert, 0, n) + " har skickats!";
             label4.ForeColor = Color.FromArgb(0, 255, 0);
             k.Close();
             lyssnare.Stop();
@@ -116,6 +122,9 @@ namespace Sjukhus
 
         private void btnAnslut_Click(object sender, EventArgs e)
         {
+            btnAnslut.Enabled = false;
+            label4.Text = "Ansluter..";
+            label4.ForeColor = Color.FromArgb(255, 255, 0);
             StartaAnslutning();
         }
     }
